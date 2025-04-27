@@ -11,5 +11,6 @@ enum PageType{
   adminDiagnostics,
   adminAccount,
   adminEmotions,
-  adminActivity
+  adminActivity,
+  adminInfo
 }

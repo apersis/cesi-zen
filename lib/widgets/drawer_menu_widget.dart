@@ -85,6 +85,7 @@ class DrawerMenuWidget extends StatelessWidget{
                   ]
                 ]
                 else ...[
+                  _MenuItem(pageType: PageType.adminInfo, isSelected: pageType == PageType.adminInfo),
                   _MenuItem(pageType: PageType.adminDiagnostics, isSelected: pageType == PageType.adminDiagnostics),
                   _MenuItem(pageType: PageType.adminAccount, isSelected: pageType == PageType.adminAccount),
                   _MenuItem(pageType: PageType.adminEmotions, isSelected: pageType == PageType.adminEmotions),
@@ -182,6 +183,9 @@ class _MenuItem extends StatelessWidget {
       case PageType.adminActivity :
         context.goNamed("adminActivity");
         break;
+      case PageType.adminInfo :
+        context.goNamed("adminInfo");
+        break;
     }
   }
 
@@ -214,6 +218,8 @@ class _MenuItem extends StatelessWidget {
         return Icon(Icons.emoji_emotions, size: iconSize,);
       case PageType.adminActivity:
         return Icon(Icons.weekend, size: iconSize,);
+      case PageType.adminInfo:
+        return Icon(Icons.info, size: iconSize,);
     }
   }
 
@@ -245,6 +251,8 @@ class _MenuItem extends StatelessWidget {
         return Text("Admin emotions");
       case PageType.adminActivity:
         return Text("Admin activités");
+      case PageType.adminInfo:
+        return Text("Admin infos");
     }
   }
 }

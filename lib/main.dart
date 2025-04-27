@@ -2,6 +2,7 @@ import 'package:cesi_zen/pages/activity_page.dart';
 import 'package:cesi_zen/pages/admin_account.dart';
 import 'package:cesi_zen/pages/admin_diagnostics.dart';
 import 'package:cesi_zen/pages/admin_emotions.dart';
+import 'package:cesi_zen/pages/admin_info.dart';
 import 'package:cesi_zen/pages/breath_page.dart';
 import 'package:cesi_zen/pages/cat_page.dart';
 import 'package:cesi_zen/pages/diagnostics_page.dart';
@@ -114,6 +115,13 @@ final GoRouter _router = GoRouter(routes: <RouteBase>[
     name: "adminEmotions", 
     builder: (BuildContext context, GoRouterState state){
       return const EmotionAdminPage();
+    }
+  ),
+  GoRoute(
+    path: '/admin/info', 
+    name: "adminInfo", 
+    builder: (BuildContext context, GoRouterState state){
+      return const InfoAdminPage();
     }
   ),
 ]);

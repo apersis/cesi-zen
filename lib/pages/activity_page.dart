@@ -673,10 +673,10 @@ class _ActivityAdminPageState extends State<ActivityAdminPage> {
       if (_error != null) return Center(child: Text(_error!, style: TextStyle(color: Colors.red)));
 
       return Scaffold(
-       drawer: DrawerMenuWidget(pageType: PageType.tracker), // Ou autre
+       drawer: DrawerMenuWidget(pageType: PageType.adminActivity), // Ou autre
        appBar: PreferredSize(
          preferredSize: Size(0, 60),
-         child: AppBarScreen(pageName: "Journal des Émotions"),
+         child: AppBarScreen(pageName: "Admin Activités"),
        ),
        body: Column(
          children: [
