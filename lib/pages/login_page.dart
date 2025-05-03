@@ -67,9 +67,9 @@ class _LoginPageState extends State<LoginPage> {
         
       // Naviguer vers la page d'accueil et supprimer la page de connexion de la pile
       if (actualAdminStatus){
-        context.goNamed("info");
+      context.goNamed("adminInfo");
       }else{
-        context.goNamed("adminInfo");
+        context.goNamed("info");
       }
     } else if (mounted) {
       // Échec de la connexion

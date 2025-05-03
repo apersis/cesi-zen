@@ -117,7 +117,6 @@ class _InfoAdminPageState extends State<InfoAdminPage> {
   Future<void> _confirmDeleteInfoItem(InfoItem item) async {
     // Vérifie si monté avant même d'afficher le dialogue
     if (!mounted) return;
-    final scaffoldMessenger = ScaffoldMessenger.of(context);
     final confirm = await showDialog<bool>( /* ... dialogue confirmation standard ... */
          context: context,
          builder: (context) => AlertDialog(
@@ -153,7 +152,7 @@ class _InfoAdminPageState extends State<InfoAdminPage> {
       drawer: DrawerMenuWidget(pageType: PageType.adminInfo), // Adapte PageType
       appBar: PreferredSize(
         preferredSize: Size(0, 60),
-        child: AppBarScreen(pageName: "Admin Emotions"),
+        child: AppBarScreen(pageName: "Admin Informations"),
       ),
       body: Column(
        children: [
